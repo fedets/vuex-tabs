@@ -9,26 +9,26 @@ export default new Vuex.Store({
     activeTabId: 0
   },
   mutations: {
-    updateCart(state, cartValue){
+    updateCart(state, cartValue) {
       state.cart = cartValue;
     },
     setActiveTab(state, tabId) {
-      state.activeTabId = tabId
+      state.activeTabId = tabId;
     }
   },
   actions: {
-    updateCart({commit},payload) {
-      commit('updateCart', payload)
+    updateCart({ commit }, payload) {
+      commit("updateCart", payload);
     },
-    setActiveTab({commit}, tabId) {
-      commit('setActiveTab', tabId)
+    setActiveTab({ commit }, tabId) {
+      commit("setActiveTab", tabId);
     }
   },
   getters: {
-    getCartValue(state){
+    getCartValue(state) {
       return state.cart;
     },
-    getActiveTabId(state){
+    getActiveTabId(state) {
       return state.activeTabId;
     }
   }
